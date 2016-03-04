@@ -87,4 +87,66 @@ public class TestConvert {
 		assertEquals("VII",message);
 	}
 
+	@Test
+	public void testEquals9() {
+		int checkVal = 9;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("IX",message);
+	}
+	@Test
+	public void testEquals24() {
+		int checkVal = 24;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("XXIV",message);
+	}
+	@Test
+	public void testEquals40() {
+		int checkVal = 40;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("XL",message);
+	}
+
+	@Test
+	public void testEquals47() {
+		int checkVal = 47;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("XLVII",message);
+	}
+	@Test
+	public void testEquals93() {
+		int checkVal = 93;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("XCIII",message);
+	}
+	@Test
+	public void testEquals247() {
+		int checkVal = 247;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("CCXLVII",message);
+	}
+
 }
