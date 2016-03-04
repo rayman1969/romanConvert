@@ -11,7 +11,7 @@ public class ConvertToRoman {
 		int workingInt = toConvert; 
 	
 		if (workingInt > 9) {
-			workingString=">9";
+			workingString=">9"; 
 		}
 		else
 		{

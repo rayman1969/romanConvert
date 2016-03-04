@@ -19,7 +19,7 @@ public class TestConvert {
 		String message = mess.LessThan10(checkVal);
 		System.out.println("Hello xxx  " + message);
 		
-		assertEquals("V",message);
+		assertEquals("V",message);  
 	}
 
 	@Test
