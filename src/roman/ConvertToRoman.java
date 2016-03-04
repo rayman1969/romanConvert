@@ -2,8 +2,18 @@ package roman;
 
 public class ConvertToRoman {
 
+	public static final String UNIT = "I";
+	public static final String FIVE = "V";
+	public static final String TEN = "X";
+	public static final String FIFTY = "L";
+	public static final String HUNDRED = "C";
+	public static final String FIVEHUNDRED = "D";
+	
 	String romanVal (int toConvert)
 	{
+		
+		
+		
 		System.out.println("you entered: " + toConvert);
 		String workingString="";
 		int workingInt = toConvert; 
@@ -15,13 +25,80 @@ public class ConvertToRoman {
 		int tens = (workingInt %100) /10;
 		int hundreds = (workingInt % 1000) /100;
 				
-		String tensString = Tens(tens);
-		String unitString = Units(units);
-		workingString = workingString + tensString + unitString;
+//		String tensString = Tens(tens);
+//		String unitString = Units(units);
+		String hundredsString = HeavyLifting(hundreds,100);
+		String tensString = HeavyLifting(tens,10);
+		String unitString = HeavyLifting(units,1);
+		
+		workingString = workingString + hundredsString + tensString + unitString;
 
 		System.out.println("The answer is: " + workingString);
 		return workingString;
 		
+	}
+
+
+	private String HeavyLifting(int inputValue, int unit) {
+		// TODO Auto-generated method stub
+		String convString="";
+		int workingValue = inputValue;
+// 		9 is a special case
+		
+//		switch (unit) {
+//		case 
+//		}
+		
+		String mid = "";
+		String single = "";
+		
+//		switch unit {
+//		case 1:
+		if (unit ==1)
+		{ 
+			mid=FIVE;
+			single=UNIT;
+//			break
+		}
+		
+		if (unit ==10)
+		{ 
+			mid=FIFTY;
+			single=TEN;
+//			break
+		}
+		
+		if (unit ==100)
+		{ 
+			mid=FIVEHUNDRED;
+			single=HUNDRED;
+//			break
+		}
+		
+		
+		
+		if (workingValue== 9) {
+			return single + mid;		
+		}
+		
+		if (workingValue/5 == 1) {
+			convString = mid;
+			workingValue = workingValue % 5;
+		}
+		
+//		
+			if (workingValue == 4) {
+				convString = convString + single + mid;
+			}
+			else {
+				// does this work for zero
+				for (int i=0;i<workingValue;i++)
+				{
+					convString = convString + single;
+				}
+			}
+			
+		return convString ;
 	}
 
 	private String Tens(int tens) {
