@@ -12,35 +12,79 @@ public class TestConvert {
 //	}
 	
 	@Test
+	public void testLessThan1() {
+		int checkVal = 0;
+		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+		assertEquals("",message);  
+	}
+
+	@Test
+	public void testEquals1() {
+		int checkVal = 1;
+		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+		
+		
+		assertEquals("I",message);  
+	}
+	
+	@Test
+	public void testEquals2() {
+		int checkVal = 2;
+		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+		
+		
+		assertEquals("II",message);  
+	}
+	
+	@Test
+	public void testEquals3() {
+		int checkVal = 3;
+		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+		
+		
+		assertEquals("III",message);  
+	}
+	
+	@Test
+	public void testEquals4() {
+		int checkVal = 4;
+		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+		
+		
+		assertEquals("IV",message);  
+	}
+	
+	@Test
 	public void testEquals5() {
 		int checkVal = 5;
-//		
+		
 		ConvertToRoman mess = new ConvertToRoman();
-		String message = mess.LessThan10(checkVal);
-		System.out.println("Hello xxx  " + message);
+		String message = mess.romanVal(checkVal) ;
+		
 		
 		assertEquals("V",message);  
 	}
 
 	@Test
-	public void testLessThan10() {
+	public void testEquals7() {
 		int checkVal = 7;
 //		
 		ConvertToRoman mess = new ConvertToRoman();
 		String message = mess.romanVal(checkVal) ;
 				
-		System.out.println("Hello ccc  " + message);
-		
-		assertEquals("<9",message);
+	
+		assertEquals("VII",message);
 	}
 
-//	@Test
-//	public void testGreaterThan9() {
-//		int checkVal = 11;
-//		Conversion message = new Conversion();
-//		message.Conversion(checkVal);
-//		System.out.println("Hello2 " + message);
-//		
-//		assertEquals(">9",message);
-//	}
 }
