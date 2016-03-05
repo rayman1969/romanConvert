@@ -16,7 +16,6 @@ public class ConvertToRoman {
 	String romanVal (int toConvert)
 	{
 		
-		System.out.println("you entered: " + toConvert);
 		String workingString="";
 		int workingInt = toConvert; 
 	
@@ -26,19 +25,18 @@ public class ConvertToRoman {
 		int units = workingInt % 10;
 		int tens = (workingInt %100) /10;
 		int hundreds = (workingInt % 1000) /100;
-				
-//		String tensString = Tens(tens);
-//		String unitString = Units(units);
-
-		System.out.println("xxx: " + hundreds + " " + tens + " " + units);
+		int thousands = (workingInt %10000) /1000;
 		
+		for (int i=0;i<thousands;i++)
+			workingString = workingString + romanArray[(romanArray.length-1)];
+				
 		String hundredsString = HeavyLifting(hundreds,4);
 		String tensString = HeavyLifting(tens,2);
 		String unitString = HeavyLifting(units,0);
 		
 		workingString = workingString + hundredsString + tensString + unitString;
 
-		System.out.println("The answer is: " + workingString);
+		System.out.println("You entered: " + toConvert + " and the answer is: " + workingString);
 		return workingString;
 		
 		
@@ -55,12 +53,9 @@ public class ConvertToRoman {
 		String single = romanArray[unit];
 		String mid = romanArray[++unit];
 		String next = romanArray[++unit];
-		
-		System.out.println("xxxx " + mid + "  " +single);
-		
-		
+				
 		if (workingValue== 9) {
-			return mid + next;		
+			return single + next;		
 		}
 		
 		if (workingValue/5 == 1) {
@@ -73,7 +68,7 @@ public class ConvertToRoman {
 				convString = convString + single + mid;
 			}
 			else {
-				// does this work for zero
+				// this work for zero
 				for (int i=0;i<workingValue;i++)
 				{
 					convString = convString + single;

@@ -65,6 +65,7 @@ public class TestConvert {
 		assertEquals("IV",message);  
 	}
 	
+	
 	@Test
 	public void testEquals5() {
 		int checkVal = 5;
@@ -148,5 +149,46 @@ public class TestConvert {
 	
 		assertEquals("CCXLVII",message);
 	}
+	@Test
+	public void testEquals900() {
+		int checkVal = 900;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("CM",message);
+	}
 
+	@Test
+	public void testEquals557() {
+		int checkVal = 557;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("DLVII",message);
+	}
+
+	@Test
+	public void testEquals1822() {
+		int checkVal = 1822;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("MDCCCXXII",message);
+	}
+	@Test
+	public void testEquals1969() {
+		int checkVal = 1969;
+//		
+		ConvertToRoman mess = new ConvertToRoman();
+		String message = mess.romanVal(checkVal) ;
+				
+	
+		assertEquals("MCMLXIX",message);
+	}
 }
