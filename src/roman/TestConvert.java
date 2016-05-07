@@ -161,14 +161,14 @@ public class TestConvert {
 	}
 
 	@Test
-	public void testEquals557() {
-		int checkVal = 557;
+	public void testEquals556() {
+		int checkVal = 556;
 //		
 		ConvertToRoman mess = new ConvertToRoman();
 		String message = mess.romanVal(checkVal) ;
 				
 	
-		assertEquals("DLVII",message);
+		assertEquals("DLVI",message);
 	}
 
 	@Test
